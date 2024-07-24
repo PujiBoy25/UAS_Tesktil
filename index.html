@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Company Profil DTY</title>
+    <meta name="author" content="Velile Vamba" />
+    <meta content="" name="lorem100" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <style type="text/css">
+      .carousel-item {
+        height: 60vh;
+        min-height: 350px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main .wrap {
+        margin: 2rem;
+
+        transform-style: preserve-3d;
+        transform: perspective(100rem);
+
+        cursor: pointer;
+      }
+
+      .main .container {
+        --rX: 0;
+        --rY: 0;
+        --bX: 50%;
+        --bY: 80%;
+
+        border: 1px solid var(--background-color);
+        border-radius: 1.6rem;
+        padding: 4rem;
+
+        display: flex;
+        align-items: flex-end;
+
+        position: relative;
+        transform: rotateX(calc(var(--rX) * 1deg))
+          rotateY(calc(var(--rY) * 1deg));
+
+        background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(32, 57, 84));
+        background-position: var(--bX) var(--bY);
+        background-size: 40rem auto;
+        box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%);
+
+        transition: transform 0.6s 1s;
+      }
+
+      .main .container::before,
+      .main .container::after {
+        content: "";
+
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #fff;
+
+        position: absolute;
+        z-index: 2;
+
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+
+      .main .container::before {
+        top: 2rem;
+        right: 2rem;
+
+        border-bottom-width: 0;
+        border-left-width: 0;
+      }
+
+      .main .container::after {
+        bottom: 2rem;
+        left: 2rem;
+
+        border-top-width: 0;
+        border-right-width: 0;
+      }
+
+      .main .container--active {
+        transition: none;
+      }
+
+      .main .container--2 {
+        filter: hue-rotate(80deg) saturate(140%);
+      }
+
+      .main .container--3 {
+        filter: hue-rotate(160deg) saturate(140%);
+      }
+
+      .main .container p {
+        color: hsla(0, 0%, 100%, 0.6);
+        font-size: 0.8rem;
+        text-align: left;
+      }
+
+      .main .wrap:hover .container::before,
+      .main .wrap:hover .container::after {
+        width: calc(100% - 4rem);
+        height: calc(100% - 4rem);
+      }
+
+      .main .abs-site-link {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        color: hsla(0, 0%, 0%);
+        font-size: 1.6rem;
+      }
+
+      /*****************************************/
+      .solutions {
+        /* The image used */
+        background-image: url(assets/img/dty2.jpg);
+
+        /* Set a specific height */
+        min-height: 500px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .solutions .wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+      }
+
+      .solutions h1 {
+        color: #fff;
+        font-weight: normal;
+        text-align: center;
+        font-size: 48px;
+      }
+
+      .solutions .panels {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .solutions .panels li {
+        margin: 0;
+        display: block;
+        box-sizing: border-box;
+        float: left;
+      }
+
+      .solutions .panels li div {
+        padding: 10% 0;
+        text-align: center;
+        color: #fff;
+        font-size: 11px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        height: 50vh;
+      }
+
+      /*// ANIMATION STYLES //*/
+
+      .solutions .panels div.back {
+        transform: rotateY(90deg);
+      }
+
+      .solutions .panels div.front {
+        position: absolute;
+      }
+
+      .solutions .panels li:hover div.front {
+        animation: twirl 0.2s ease-in forwards;
+      }
+      .solutions .panels li:hover div.back {
+        animation: twirl 0.2s 0.2s ease-out forwards reverse;
+      }
+
+      @keyframes twirl {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(90deg);
+        }
+      }
+
+      .why-us {
+        /* The image used */
+        background-image: url(assets/img/dty6.jpg);
+
+        /* Set a specific height */
+        min-height: 350px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header" class="fixed-top">
+      <div class="container">
+        <div class="logo float-left">
+          <!-- <h1 class="text-light"><a href="index.html"><span>Our-Compnay Associate</span></a></h1> -->
+          <a href="/"
+            ><img src="assets/img/logo pei.png" alt="" class="img-fluid"
+          /></a>
+        </div>
+
+        <nav class="nav-menu float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#header">Home</a></li>
+            <li><a href="#profil">Company Profil</a></li>
+            <li><a href="#produk">Product Profil</a></li>
+            <li><a href="#proses">Production Proses</a></li>
+            <li><a href="#costumer">Costumer</a></li>
+            <li><a href="#pemanfaatan">Product Ultilization</a></li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+      </div>
+    </header>
+    <!-- End #header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div
+            class="carousel-item active"
+            style="background-image: url(assets/img/dty2.jpg)"
+          >
+            <div class="carousel-caption">
+              <h2 class="display-4" style="background: rgba(0, 0, 0, 0.7); border-radius: 3px">Welcome</h2>
+              <p
+                class="lead"
+                style="background: rgba(0, 0, 0, 0.7); border-radius: 3px"
+              >
+                Selamat datang di website DTY
+              </p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div
+            class="carousel-item"
+            style="background-image: url(assets/img/dty3.jpg)"
+          >
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div
+            class="carousel-item"
+            style="background-image: url(assets/img/dty4.jpg)"
+          >
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <!-- #hero -->
+
+    <main id="main">
+      <!-- ======= About Us Section ======= -->
+      <section id="profil" class="profil">
+        <div class="container border border-dark">
+          <div class="section-title">
+            <h2>Company Profil</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2">
+              <img src="assets/img/dty10.jpg" class="img-fluid pl-5 mb-5" alt="" style="width: 300px;"/>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" style="margin-top: 100px; ">
+              <p class="">
+                DTY (Draw Textured Yarn) atau benang bertexture merupakan salah
+                satu hasil produksi dari Vocational Training Center politeknik
+                Enjinering Indorama sebagai mitra Perguruan tinggi PT Indorama
+                Synthetics Tbk. Awal beridiri perusahaan ini pada tahun 2013.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    <main id="main">
+      <!-- ======= About Us Section ======= -->
+      <section id="produk" class="produk">
+        <div class="container border border-dark">
+          <div class="section-title">
+            <h2>Product Profil</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2">
+              <img src="assets/img/dty5.jpg" class="img-fluid pl-5 mb-5" alt="" style="width: 300px;"/>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 mt-5">
+              <p>
+                DTY merupakan proses lanjut yang berasal dari POY (Partially
+                Oriented Yarn). Proses pembuatan benang texturized dilakukan
+                melalui metode pemuntiran atau twist dan penarikan dengan
+                perbandingan putaran positorq dari rol pertama dengan rol kedua
+                yang biasa dikenal dengan draw ratio, melalui pemanasan pada
+                Primary heater dan secondary heater dengan suhu tertentu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Us Section -->
+
+      <!-- ======= Call To Action Section ======= -->
+      <section id="proses" class="call-to-action">
+        <div class="container">
+          <div class="text-center">
+            <div class="section-title">
+              <h2 style="color: #fff">Proses</h2>
+            </div>
+
+            <p>Terdapat beberapa Proses untuk menjadikan kain DTY</p>
+
+            <div class="container-fluid">
+              <div class="col-md-12">
+                <div class="row main">
+                  <div class="wrap wrap--3 col-md-3">
+                    <h6 style="color: #fff; text-align: center">
+                      01. Persiapan
+                    </h6>
+                    <div class="container container--3">
+                      <p>
+                        Tahap awal dalam proses produksi adalah persiapan bahan
+                        baku. Bahan baku yang sebelumnya benang POY dan
+                        dipersiapkan untuk memastikan kualitasnya sebelum
+                        memasuki proses berikutnya.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="wrap wrap--3 col-md-3">
+                    <h6 style="color: #fff; text-align: center">
+                      02. Penyambungan
+                    </h6>
+                    <div class="container container--3">
+                      <p>
+                        Pada tahap ini, benang yang telah dipersiapkan disambung
+                        satu sama lain. Proses penyambungan dilakukan dengan
+                        teliti untuk memastikan benang yang dihasilkan memiliki
+                        panjang yang diinginkan tanpa ada putus-putus.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="wrap wrap--3 col-md-3">
+                    <h6 style="color: #fff; text-align: center">
+                      03. Proses Awal Penggulungan
+                    </h6>
+                    <div class="container container--3">
+                      <p>
+                        Setelah penyambungan, benang yang panjang digulung pada
+                        gulungan besar. Proses penggulungan ini penting untuk
+                        memastikan benang mudah digunakan dan diproses lebih
+                        lanjut pada tahap berikutnya.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap wrap--3 col-md-3">
+                    <h6 style="color: #fff; text-align: center">
+                      04. Pengambilan Barang
+                    </h6>
+                    <div class="container container--3">
+                      <p>
+                        Pada tahap ini, benang yang telah digulung diambil dan
+                        dipindahkan ke rak untuk melakukan proses selanjutya.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap wrap--3 col-md-3">
+                    <h6 style="color: #fff; text-align: center">
+                      05. Pemilihan/Penilaian
+                    </h6>
+                    <div class="container container--3">
+                      <p>
+                        Setelah benang diambil, dilakukan penilaian kualitas.
+                        Proses penilaian melibatkan pemeriksaan kekuatan,
+                        elastisitas, dan konsistensi benang untuk memastikan
+                        produk memenuhi standar yang ditetapkan.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap wrap--3 col-md-3">
+                    <h6 style="color: #fff; text-align: center">
+                      06. Rajut Menjadi Kain
+                    </h6>
+                    <div class="container container--3">
+                      <p>
+                        Benang yang telah lolos penilaian kualitas kemudian
+                        dirajut menjadi kain. Proses merajut ini memberikan
+                        bentuk akhir pada produk tekstil dan memastikan benang
+                        digunakan secara optimal.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap wrap--3 col-md-3">
+                    <h6 style="color: #fff; text-align: center">07. Packing</h6>
+                    <div class="container container--3">
+                      <p>
+                        Tahap terakhir adalah pengemasan produk. Mengsortir
+                        benang yang telah di cek pada proses sebelumnya dan di
+                        satukan dengan ukuran yang lain pada saat di kemas.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Call To Action Section -->
+
+      <!-- ======= Frequently Asked Questions Section ======= -->
+
+      <section id="costumer" class="solutions">
+        <div class="wrapper">
+          <h1>Costumer</h1>
+          <ul class="panels">
+            <div class="row">
+              <li class="col-md-6">
+                <div class="front" style="background: #203954">
+                  <h6>1. Industri Tenun</h6>
+                  <p>
+                    Pelanggan pertama adalah industri tenun yang membutuhkan DTY
+                    untuk memproduksi kain tenun berkualitas tinggi. Produk DTY
+                    kami memberikan kekuatan dan elastisitas yang diperlukan
+                    untuk menghasilkan kain tenun yang tahan lama dan nyaman.
+                  </p>
+                </div>
+                <div class="back" style="background: #020a20">
+                  <h6>1. Industri Tenun</h6>
+                  <p>
+                    Pelanggan pertama adalah industri tenun yang membutuhkan DTY
+                    untuk memproduksi kain tenun berkualitas tinggi. Produk DTY
+                    kami memberikan kekuatan dan elastisitas yang diperlukan
+                    untuk menghasilkan kain tenun yang tahan lama dan nyaman.
+                  </p>
+                </div>
+              </li>
+              <li class="col-md-6">
+                <div class="front" style="background: #203954">
+                  <h6>2. Industri Rajut</h6>
+                  <p>
+                    Pelanggan kedua adalah industri rajut yang menggunakan DTY
+                    untuk memproduksi kain rajut. DTY yang kami hasilkan
+                    memiliki tekstur dan elastisitas yang sesuai untuk kebutuhan
+                    rajut, menghasilkan produk yang lembut dan fleksibel.
+                  </p>
+                </div>
+                <div class="back" style="background: #020a20">
+                  <h6>2. Industri Rajut</h6>
+                  <p>
+                    Pelanggan kedua adalah industri rajut yang menggunakan DTY
+                    untuk memproduksi kain rajut. DTY yang kami hasilkan
+                    memiliki tekstur dan elastisitas yang sesuai untuk kebutuhan
+                    rajut, menghasilkan produk yang lembut dan fleksibel.
+                  </p>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </section>
+      <!-- End Frequently Asked Questions Section -->
+
+      <!-- ======= Our Team Section ======= -->
+      <section id="pemanfaatan" class="team">
+        <div class="container" style="text-align: center">
+          <div class="section-title">
+            <h2>Pemanfaatan Produk</h2>
+          </div>
+
+          <div class="border border-dark bg-black rounded-pill">
+            <p>1. pakaian</p>
+            <p>
+              Produk DTY digunakan secara luas dalam pembuatan berbagai jenis
+              pakaian seperti kaos, kemeja, dan pakaian olahraga. Benang yang
+              elastis dan kuat memberikan kenyamanan dan daya tahan pada
+              pakaian.
+            </p>
+          </div>
+          <div class="border border-dark bg-black rounded-pill mt-3">
+            <p>2. Kain Tenun dan Rajut</p>
+            <p>
+              DTY digunakan dalam industri tenun dan rajut untuk menghasilkan
+              kain dengan kualitas tinggi. Produk ini sangat cocok untuk
+              aplikasi seperti selimut, taplak meja, dan bahan pelapis furnitur.
+            </p>
+          </div>
+
+          
+        </div>
+      </section>
+      <!-- End Our Team Section -->
+
+      <section id="" class="why-us" style="color: #fff">
+        <div class="container" style="text-align: center">
+          <div class="col-md-8 offset-md-2 pt-5">
+            <img
+              src="assets/img/logo pei.png"
+              class="rounded"
+              width="100"
+              height="100"
+              alt="..."
+            />
+            <img
+              src="assets/img/home-logo.png"
+              class="rounded"
+              width="auto"
+              height="100"
+              alt="..."
+            />
+          </div>
+
+          <div class="collapse" id="collapseExample">
+            <div class="col-lg-5 col-md-12">
+              <form
+                action="forms/contact.php"
+                method="post"
+                role="form"
+                class="php-email-form"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    data-rule="minlen:4"
+                    data-msg="Please enter at least 4 chars"
+                  />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    data-rule="email"
+                    data-msg="Please enter a valid email"
+                  />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="5"
+                    data-rule="required"
+                    data-msg="Please tell us why you need a demo"
+                    placeholder="Message"
+                  ></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-info" type="submit">
+                    Send Request
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ======= Map Section ======= -->
+      <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d63419.90760591841!2d107.37691946750245!3d-6.553940447620879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x2e690eef96f8b8dd%3A0x90e544db728376b5!2sPoliteknik%20Enjinering%20Indorama%2C%20Kembangkuning%2C%20Purwakarta%20Regency%2C%20West%20Java!3m2!1d-6.5540274!2d107.4181196!4m5!1s0x2e690eef96f8b8dd%3A0x90e544db728376b5!2sKembangkuning%2C%20Kec.%20Jatiluhur%2C%20Kabupaten%20Purwakarta%2C%20Jawa%20Barat%2041152!3m2!1d-6.5540274!2d107.4181196!5e0!3m2!1sid!2sid!4v1721832283498!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+      <!-- End Map Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>By</span></strong
+          >. PujiBoy
+        </div>
+      </div>
+    </footer>
+    <!-- End #footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
